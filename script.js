@@ -1,8 +1,9 @@
 
-let heartCount = 0, coinCount = 100;
+let heartCount = 0, coinCount = 100; copyCount = 0;
 
 const heartCounter = document.getElementById("heartCount");
 const coinCounter = document.getElementById("coinCount");
+const copyCountDisplay = document.getElementById("copyCount");
 const historyContainer = document.getElementById("callHistory");
 const clearBtn = document.getElementById("clearHistoryBtn");
 
@@ -10,8 +11,22 @@ const clearBtn = document.getElementById("clearHistoryBtn");
 document.querySelectorAll(".fa-heart").forEach(function(icon) {
   icon.style.cursor = "pointer";
   icon.onclick = function() {
-    heartCounter.textContent = ++heartCount;
+    heartCounter.textContent = heartCount++;
   };
+});
+
+
+// Copy 
+document.querySelectorAll(".btn-wide").forEach(function(button) {
+  button.addEventListener("click", function() {
+    const card = button.closest(".bg-white");
+    const phoneNumber = card.querySelector("h1").textContent.trim();
+     navigator.clipboard.writeText(phoneNumber).then(function() {
+      copyCount++;
+      copyCountDisplay.textContent = `${copyCount} Copy`;
+      alert(`Phone number "${phoneNumber}" copied to clipboard!`);
+    })
+  });
 });
 
 
@@ -29,7 +44,6 @@ document.querySelectorAll(".fa-phone").forEach(function(icon) {
     addToHistory(serviceName, number);
   };
 });
-
 
 // --- Add Call to History ---
 function addToHistory(serviceName, number) {
@@ -58,5 +72,20 @@ function addToHistory(serviceName, number) {
 }
 
 // --- Clear History ---
-clearBtn && (clearBtn.onclick = () => historyContainer.innerHTML = "");
+if (clearBtn) {
+  clearBtn.onclick = function() {
+    historyContainer.innerHTML = "";
+  };
+}
+
+
+
+
+
+    
+
+
+
+
+
 
