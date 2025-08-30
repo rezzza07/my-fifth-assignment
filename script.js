@@ -21,13 +21,22 @@ document.querySelectorAll(".btn-wide").forEach(function(button) {
   button.addEventListener("click", function() {
     const card = button.closest(".bg-white");
     const phoneNumber = card.querySelector("h1").textContent.trim();
-     navigator.clipboard.writeText(phoneNumber).then(function() {
-      copyCount++;
-      copyCountDisplay.textContent = `${copyCount} Copy`;
-      alert(`Phone number "${phoneNumber}" copied to clipboard!`);
-    })
+
+    navigator.clipboard.writeText(phoneNumber)
+      .then(function() {
+        copyCount++;
+        if (copyCountDisplay) {
+          copyCountDisplay.textContent = `${copyCount} Copy`;
+        }
+        alert(`Phone number "${phoneNumber}" copied to clipboard!`);
+      })
+      .catch(function(err) {
+        console.error("Clipboard write failed:", err);
+        alert("Failed to copy phone number.");
+      });
   });
 });
+
 
 
 // --- Call Btn ---
@@ -83,6 +92,14 @@ if (clearBtn) {
 
 
     
+
+
+
+
+
+
+x
+
 
 
 

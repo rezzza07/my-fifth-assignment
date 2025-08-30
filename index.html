@@ -13,49 +13,51 @@
     integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="">
-
-<!-- navbar -->
-<div class="max-w p-5 bg-white px-[30px] py-[14px]">
-<div class="flex justify-between items-center  ">
-    <div class="flex h-[50px]">
-      <img src="./assets/logo.png" alt="">
-    <div class="ml-[10px] flex justify-center items-center">
-        <h2 class="font-extrabold text-[#006747]">Emergency <br> Service</h2>
-    </div>
-</div>
-
-<div class="flex justify-between">
-    <div class="bg-[#41ff6b1a] rounded-[50px] p-3 w-[123px] h-[52px] flex justify-center mx-[20px]">
-        <h1 id="heartCount" class="font-black text-[16px] mr-[10px]">0</h1>
-        <img src="./assets/heart.png" alt="" class="h-[30px] ">
-    </div>
-    <div class="bg-[#41ff6b1a] rounded-[50px] p-3 w-[123px] h-[52px] flex justify-center ">
-        <h1 id="coinCount" class="font-black text-[16px] mr-[10px]">100</h1>
-        <img src="./assets/coin.png" alt="" class="h-[30px] ">
-    </div>
-    <div class="bg-[#00a63e] rounded-[50px] p-3 w-[123px] h-[52px] flex justify-center mx-[20px]">
-        <h1 class="font-semibold text-white text-[16px] mr-[10px]">0 Copy</h1>
-    </div>
+<!--------------------------------------------------- navbar ----------------------------------------------------------------------->
+<nav class="bg-white px-6 py-4">
+  <div class="flex flex-col md:flex-row justify-between items-center">
+    <div class="flex items-center h-[50px] mb-4 md:mb-0">
+      <img src="./assets/logo.png" alt="Emergency Service Logo" class="h-[50px]">
+      <div class="ml-3"><h2 class="font-extrabold text-[#006747] leading-tight">Emergency <br> Service</h2>
 </div></div>
+    <div class="flex flex-wrap justify-center md:justify-end gap-4">
+      <div class="hidden md:flex bg-[#41ff6b1a] rounded-[50px] p-3 w-[123px] h-[52px] items-center justify-center">
+        <h1 id="heartCount" class="font-black text-[16px] mr-2">0</h1>
+        <img src="./assets/heart.png" alt="Heart Icon" class="h-[30px]">
+      </div>
+      <div class="hidden md:flex bg-[#41ff6b1a] rounded-[50px] p-3 w-[123px] h-[52px] items-center justify-center">
+        <h1 id="coinCount" class="font-black text-[16px] mr-2">100</h1>
+        <img src="./assets/coin.png" alt="Coin Icon" class="h-[30px]">
+      </div>
+      <div class="bg-[#00a63e] rounded-[50px] p-3 w-[123px] h-[52px] flex items-center justify-center">
+        <h1 class="font-semibold text-white text-[16px] mr-2" id="copyCount">0 Copy</h1>
+      </div></div>
+  </div>
+</nav>
+
+<body class="w-full mx-auto">
+
+<!--------------------------------------------------- Emergency Service Directory ----------------------------------------------------------------------->
+<section>
+  <div class="bg-gradient-to-r from-[#013223] to-[#006747] h-auto py-6 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-24 mt-3 flex flex-col justify-center items-center text-center">
+    <img src="./assets/logo-dark.png" alt="Logo" 
+         class="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] md:w-[92px] md:h-[92px] mb-4">
+         <h1 class="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Emergency Service Directory</h1>
+         <p class="text-white font-normal text-base sm:text-lg md:text-xl lg:text-2xl mt-2 max-w-4xl">
+      Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p></div>
+</section>
 
 
-<!-- Emergency Service Directory -->
- <div class="bg-gradient-to-r from-[#013223] to-[#006747]  h-[239px] py-3 px-[60px] mt-[25px] flex flex-col justify-center items-center">
-    <img src="./assets/logo-dark.png" alt="" class="w-[92px] h-[92px] mt-[21[x]]">
-    <h1 class="text-white font-bold text-[40px]">Emergency Service Directory</h1>
-    <p class="text-white font-normal text-[20px]">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
- </div>
+<div class=" lg:flex  bg-[#41ff6b1a] sm:grid-cols-1 justify-center gap-8 lg:grid-cols-3 ">
 
-<div class="w-full mx-auto flex justify-center bg-[#41ff6b1a]">
-<!-- Service Card Section -->
-<div class="rounded-2xl  h-360px grid grid-cols-3">
-  
+ <!--------------------------------------------------- Service Card Section ----------------------------------------------------------------------------->
+<div class="rounded-2xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:m-[44px]">
+
 <!-- National Emergency -->
-<div class="national-emergency m-[30px] p-8 rounded-[12px] shadow-md bg-white">
+<div class="national-emergency p-8 rounded-[12px] shadow-md bg-white">
     <div class="flex ">
     <div class="flex flex-col space-y-[16px]">
-    <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#ffe3e2] mr-[288px]">
+    <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#ffe3e2]">
         <img src="./assets/emergency.png" alt="fire service" class="w-8"></div>
     <div>
         <h2 class="text-lg font-bold">National Emergency Number </h2>
@@ -65,14 +67,14 @@
     <div class="mt-4">
     <h1 class="text-[32px] font-bold"> 999 </h1>
     <p class="my-2 px-3 py-1 w-[60px] text-[18px] rounded-full bg-gray-100 text-gray-600">All</p></div>
-    <div class="mt-4 flex space-x-2  items-center">
+    <div class="mt-4 grid grid-cols-2 space-x-2  items-center">
         <button class="btn btn-wide w-[182px]"><i class="fa-solid fa-copy"></i>Copy</button>
         <button class="btn btn-active btn-secondary w-[182px] bg-[#00a63e] border-0 hover:bg-[#0cc44f]"><i class="fa-solid fa-phone"></i>Call</button></div>
 </div>
 
 <!-- Police Emergency -->
 
-<div class="police-emergency m-[30px] p-8 rounded-[12px] shadow-md bg-white">
+<div class="police-emergency m-[0px] p-8 rounded-[12px] shadow-md bg-white">
     <div class="flex">
     <div class="flex flex-col space-y-[16px]">
     <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#dfefff] mr-[288px]">
@@ -91,7 +93,7 @@
 </div>
 
 <!-- Fire Service Number -->
-<div class="fire-service m-[30px] p-8 rounded-[12px] shadow-md bg-white">
+<div class="fire-service m-[0px] p-8 rounded-[12px] shadow-md bg-white">
     <div class="flex">
     <div class="flex flex-col space-y-[16px]">
     <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#ffe3e2] mr-[288px]">
@@ -109,7 +111,7 @@
 </div>
 
 <!-- Ambulance Service  -->
- <div class="ambulance-service m-[30px] p-8 rounded-[12px] shadow-md bg-white">
+ <div class="ambulance-service m-[0px] p-8 rounded-[12px] shadow-md bg-white">
     <div class="flex">
     <div class="flex flex-col space-y-[16px]">
     <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#ffe3e2] mr-[288px]">
@@ -127,11 +129,11 @@
  </div>
 
  <!-- Women & Child Helpline  -->
-<div class="woman and child m-[30px] p-8 rounded-[12px] shadow-md bg-white">
+<div class="woman and child m-[0px] p-8 rounded-[12px] shadow-md bg-white">
     <div class="flex">
     <div class="flex flex-col space-y-[16px]">
     <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#ffe3e2] mr-[288px]">
-            <img src="./assets/emergency.png" alt="fire service" class="w-8"></div>
+            <img src="./assets/mother-and-daughter.png" alt="fire service" class="w-8"></div>
     <div>
             <h2 class="text-lg font-bold">Women & Child Helpline </h2>
             <p class="text-gray-400 text-[18px]">Women & Child Helpline</p></div></div>
@@ -145,11 +147,11 @@
 </div>
 
 <!-- Anti-Corruption -->
-<div class="anti-corruption m-[30px] p-8 rounded-[12px] shadow-md bg-white">
+<div class="anti-corruption m-[0px] p-8 rounded-[12px] shadow-md bg-white">
     <div class="flex">
     <div class="flex flex-col space-y-[16px]">
     <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#ffe3e2] mr-[288px]">
-            <img src="./assets/emergency.png" alt="fire service" class="w-8"></div>
+            <img src="./assets/anti-corruption.png" alt="fire service" class="w-8"></div>
     <div>
             <h2 class="text-lg font-bold">Anti-Corruption Helpline </h2>
             <p class="text-gray-400 text-[18px]">Anti-Corruption</p></div></div>
@@ -163,11 +165,11 @@
 </div>
 
 <!-- Electricity -->
-<div class="electricity m-[30px] p-8 rounded-[12px] shadow-md bg-white">
+<div class="electricity m-[0px] p-8 rounded-[12px] shadow-md bg-white">
     <div class="flex">
     <div class="flex flex-col space-y-[16px]">
     <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#ffe3e2] mr-[288px]">
-            <img src="./assets/emergency.png" alt="fire service" class="w-8"></div>
+            <img src="./assets/lightning.png" alt="fire service" class="w-8"></div>
     <div>
             <h2 class="text-lg font-bold">Electricity Helpline</h2>
             <p class="text-gray-400 text-[18px]">Electricity Outrage</p></div></div>
@@ -181,7 +183,7 @@
 </div>
 
 <!-- BRAC -->
-<div class="brac m-[30px] p-8 rounded-[12px] shadow-md bg-white">
+<div class="brac m-[0px] p-8 rounded-[12px] shadow-md bg-white">
     <div class="flex">
     <div class="flex flex-col space-y-[16px]">
     <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#ffe3e2] mr-[288px]">
@@ -195,11 +197,10 @@
     <p class="my-2 px-3 py-1 w-[68px] text-[18px] rounded-full bg-gray-100 text-gray-600">NGO</p></div>
     <div class="mt-4 flex space-x-2 justify-center items-center">
             <button class="btn btn-wide w-[182px]"><i class="fa-solid fa-copy"></i>Copy</button>
-            <button class="btn btn-active btn-secondary w-[182px] bg-[#00a63e] border-0 hover:bg-[#0cc44f]"><i class="fa-solid fa-phone"></i>Call</button></div>
-</div>
+            <button class="btn btn-active btn-secondary w-[182px] bg-[#00a63e] border-0 hover:bg-[#0cc44f]"><i class="fa-solid fa-phone"></i>Call</button></div></div>
 
 <!-- Railway -->
-<div class="railway m-[30px] p-8 rounded-[12px] shadow-md bg-white">
+<div class="railway m-[0px] p-8 rounded-[12px] shadow-md bg-white">
     <div class="flex">
     <div class="flex flex-col space-y-[16px]">
     <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#ffe3e2] mr-[288px]">
@@ -214,13 +215,13 @@
     <div class="mt-4 flex space-x-2 justify-center items-center">
             <button class="btn btn-wide w-[182px]"><i class="fa-solid fa-copy"></i>Copy</button>
             <button class="btn btn-active btn-secondary w-[182px] bg-[#00a63e] border-0 hover:bg-[#0cc44f]"><i class="fa-solid fa-phone"></i>Call</button></div>
-</div></div>
-
+</div>
+</div>
 <!------------------------------------------------------------- Call History ------------------------------------------------------------------------->
 
 <!-- Call History Section -->
-<div  class=" bg-white rounded-2xl shadow p-6 h-[1330px] mt-[30px] md:w-[500px] ml-[35px]" >
-  <div class="flex justify-between items-center mb-4">
+<div  class=" bg-white rounded-2xl shadow p-6 h-[1400px] lg:m-[44px] md:w-[500px] " >
+  <div class="flex justify-between items-center">
     <h2 class="text-lg font-bold "><i class="fa-regular fa-clock mr-2"></i>Call History</h2>
     <div id="clearHistoryBtn" class="bg-[#00a63e] rounded-[50px] py-3 w-[123px] flex justify-center mx-[20px]">
         <h1 class="font-semibold text-white text-center text-[20px] mr-[10px]">Clear</h1></div>
@@ -276,11 +277,8 @@
       </div>
       <span class="text-xs">11:36:58 AM</span>
     </div>
-
-    
-
-  </div>
 </div>
+</div></div>
 
 </div>
 </div>
