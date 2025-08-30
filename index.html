@@ -27,11 +27,11 @@
 
 <div class="flex justify-between">
     <div class="bg-[#41ff6b1a] rounded-[50px] p-3 w-[123px] h-[52px] flex justify-center mx-[20px]">
-        <h1 class="font-black text-[16px] mr-[10px]">0</h1>
-        <img src="./assets/heart.png" alt="" class="h-[30px] ">
+        <h1 id="heartCount" class="font-black text-[16px] mr-[10px]">0</h1>
+        <img src="./assets/heart.png" alt="" class="h-[30px] " id="heartIcon">
     </div>
     <div class="bg-[#41ff6b1a] rounded-[50px] p-3 w-[123px] h-[52px] flex justify-center ">
-        <h1 class="font-black text-[16px] mr-[10px]">100</h1>
+        <h1 id="coinCount" class="font-black text-[16px] mr-[10px]">100</h1>
         <img src="./assets/coin.png" alt="" class="h-[30px] ">
     </div>
     <div class="bg-[#00a63e] rounded-[50px] p-3 w-[123px] h-[52px] flex justify-center mx-[20px]">
@@ -185,7 +185,7 @@
     <div class="flex">
     <div class="flex flex-col space-y-[16px]">
     <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#ffe3e2] mr-[288px]">
-            <img src="./assets/emergency.png" alt="fire service" class="w-8"></div>
+            <img src="./assets/brac.png" alt="fire service" class="w-8"></div>
     <div>
             <h2 class="text-lg font-bold">Brac Helpline</h2>
             <p class="text-gray-400 text-[18px]">Brac</p></div></div>
@@ -203,7 +203,7 @@
     <div class="flex">
     <div class="flex flex-col space-y-[16px]">
     <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#ffe3e2] mr-[288px]">
-            <img src="./assets/emergency.png" alt="fire service" class="w-8"></div>
+            <img src="./assets/Bangladesh-Railway.png" alt="fire service" class="w-8"></div>
     <div>
             <h2 class="text-lg font-bold">Bangladesh Railway Helpline </h2>
             <p class="text-gray-400 text-[18px]">Bangladesh Railway </p></div></div>
@@ -219,15 +219,15 @@
 <!------------------------------------------------------------- Call History ------------------------------------------------------------------------->
 
 <!-- Call History Section -->
-<div class="  bg-white rounded-2xl shadow p-6 h-[1330px] mt-[30px] md:w-[500px] ml-[35px]">
+<div  class=" bg-white rounded-2xl shadow p-6 h-[1330px] mt-[30px] md:w-[500px] ml-[35px]" >
   <div class="flex justify-between items-center mb-4">
     <h2 class="text-lg font-bold "><i class="fa-regular fa-clock mr-2"></i>Call History</h2>
-    <div class="bg-[#00a63e] rounded-[50px] py-3 w-[123px] flex justify-center mx-[20px]">
+    <div id="clearHistoryBtn" class="bg-[#00a63e] rounded-[50px] py-3 w-[123px] flex justify-center mx-[20px]">
         <h1 class="font-semibold text-white text-center text-[20px] mr-[10px]">Clear</h1></div>
 </div>
 
 <!-- History List -->
-<div class="space-y-3 h-auto mt-[48px] ">
+<div id="callHistory" class="space-y-3 h-auto mt-[48px] ">
     <!-- Single History Item -->
     <div class="flex justify-between items-center p-4 bg-[#fafafa]">
       <div>
@@ -283,7 +283,8 @@
 </div>
 
 </div>
-
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>
